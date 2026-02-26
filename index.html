@@ -1,14 +1,25 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <h1>Blog Post Generator</h1>
+
+  <form id="blog-post-form">
+    <input type="text" id="title" placeholder="Enter title" required>
+    <textarea id="content" placeholder="Enter content" required></textarea>
+    <button type="submit">Create Post</button>
+  </form>
+
+  <div id="blog-posts-container">
+    <!-- Blog posts will be added here -->
+  </div>
+
+  <script src="main.js" type="module"></script>
 </body>
 </html>
