@@ -26,9 +26,9 @@ class BlogPost extends HTMLElement {
   }
 
   render() {
-    const title = this.getAttribute('title') || 'Untitled';
+    const title = this.getAttribute('title') || '제목 없음';
     const content = this.getAttribute('content') || '';
-    const date = this.getAttribute('date') || new Date().toLocaleDateString();
+    const date = this.getAttribute('date') || new Date().toLocaleDateString('ko-KR');
     const tags = this.getAttribute('tags') || '';
     const tagList = tags.split(',').map(tag => tag.trim()).filter(tag => tag !== '');
 
@@ -122,7 +122,7 @@ class BlogPost extends HTMLElement {
         </div>
         <div class="content">${content}</div>
         <div class="actions">
-          <button class="delete-btn">Delete</button>
+          <button class="delete-btn">삭제하기</button>
         </div>
       </div>
     `;

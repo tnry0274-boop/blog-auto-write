@@ -35,7 +35,7 @@ form.addEventListener('submit', (e) => {
   const title = document.getElementById('title').value;
   const content = document.getElementById('content').value;
   const tags = document.getElementById('tags').value;
-  const date = new Date().toLocaleDateString('en-US', { 
+  const date = new Date().toLocaleDateString('ko-KR', { 
     year: 'numeric', 
     month: 'long', 
     day: 'numeric' 
@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
   // Visual feedback
   const button = form.querySelector('button');
   const originalText = button.textContent;
-  button.textContent = 'Published!';
+  button.textContent = '발행 완료!';
   button.style.background = 'var(--accent-color)';
   
   setTimeout(() => {
