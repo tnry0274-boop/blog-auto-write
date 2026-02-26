@@ -1,33 +1,39 @@
 
-# Blog Post Generator
+# Blog Content Generator (Nexus AI)
 
 ## Overview
 
-A modern, framework-less blog writing application that allows users to create, view, and manage blog posts with a polished, vibrant UI. Built with Web Components, LocalStorage for persistence, and modern CSS (Baseline).
+A specialized tool designed to automatically generate high-quality blog titles and content based on a single topic. The focus is on providing a seamless experience where users can generate content and instantly copy it for use elsewhere.
 
-## Current Features
+## Core Features
 
-*   **Blog Post Component (`<blog-post>`):** Encapsulated custom element for displaying posts.
-*   **Persistent Storage:** Posts are saved to `localStorage` and persist across page refreshes.
-*   **Modern UI:** Responsive grid layout, elegant typography (expressive font sizes), vibrant colors (OKLCH), and deep shadows.
-*   **Post Management:** Ability to create and delete blog posts.
-*   **Interactive Design:** Hover effects, glow animations on buttons, and subtle background textures.
-*   **AI Auto-Write:** Automatically generates a title and content based on a user-provided topic using a smart template engine.
+*   **Topic-Based Generation:** Users input a topic, and the AI (template engine) generates a structured blog post.
+*   **One-Click Copy:** Dedicated buttons to copy the title and the full content to the clipboard.
+*   **Distraction-Free UI:** A clean, focused interface centered around the generation process.
+*   **Live Preview:** Instantly see the generated result in a polished format.
+*   **No Database/Publishing:** Removed local storage and publishing features to focus purely on content creation and export.
 
 ## Detailed Plan & Steps
 
-1.  **Implement AI Generation Logic (`main.js`):**
-    *   Create a `generateContent(topic)` function that maps keywords to high-quality blog templates.
-    *   Add a loading state to simulate AI processing.
-    *   Integrate the generation logic with the UI.
+1.  **Redesign UI for Generation (`index.html`):**
+    *   Center the UI around the topic input.
+    *   Create a "Result Area" that displays the generated Title, Content, and Tags.
+    *   Add "Copy Title" and "Copy Content" buttons.
+    *   Remove the "Publish" button and the "Recent Stories" list.
 
-2.  **Update Interface for AI Writing (`index.html`):**
-    *   Add an "AI Topic" input field at the top of the editor.
-    *   Add an "Auto-Generate" button with a magic/sparkle icon.
+2.  **Enhance Visual Style (`style.css`):**
+    *   Make the generated content area look like a professional editor/preview.
+    *   Style the Copy buttons with clear visual feedback (success states).
+    *   Maintain the modern OKLCH color palette and glassmorphism effects.
 
-3.  **Style AI Features (`style.css`):**
-    *   Design the AI input section with a distinct "AI" feel (gradients, glow).
-    *   Add loading animations for the generation process.
+3.  **Update Core Logic (`main.js`):**
+    *   Remove all `localStorage` and post-listing code.
+    *   Improve the content generation logic with more comprehensive templates.
+    *   Implement the Clipboard API for copying text.
+    *   Add a "Reset" or "Start Over" function.
 
-4.  **Deployment:**
-    *   Commit and push changes to GitHub.
+4.  **Cleanup:**
+    *   Remove unused components or files (like the old blog-post list logic).
+
+5.  **Deployment:**
+    *   Commit and push the overhauled version to GitHub.
