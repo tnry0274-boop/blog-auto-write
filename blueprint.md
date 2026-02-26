@@ -12,34 +12,22 @@ A modern, framework-less blog writing application that allows users to create, v
 *   **Modern UI:** Responsive grid layout, elegant typography (expressive font sizes), vibrant colors (OKLCH), and deep shadows.
 *   **Post Management:** Ability to create and delete blog posts.
 *   **Interactive Design:** Hover effects, glow animations on buttons, and subtle background textures.
+*   **AI Auto-Write:** Automatically generates a title and content based on a user-provided topic using a smart template engine.
 
 ## Detailed Plan & Steps
 
-1.  **Enhance `<blog-post>` Component (`blog-post.js`):**
-    *   Improve Shadow DOM structure for better styling.
-    *   Add "Delete" button that dispatches a custom event.
-    *   Implement better typography and layout within the component using modern CSS.
-    *   Add support for date and tags.
+1.  **Implement AI Generation Logic (`main.js`):**
+    *   Create a `generateContent(topic)` function that maps keywords to high-quality blog templates.
+    *   Add a loading state to simulate AI processing.
+    *   Integrate the generation logic with the UI.
 
-2.  **Modernize UI & Layout (`style.css`):**
-    *   Use OKLCH for vibrant color palettes.
-    *   Apply subtle noise texture to the background.
-    *   Implement expressive typography (Hero headings, clear sections).
-    *   Add deep, multi-layered shadows and glow effects for interactive elements.
-    *   Ensure mobile responsiveness using Container Queries and Flex/Grid.
+2.  **Update Interface for AI Writing (`index.html`):**
+    *   Add an "AI Topic" input field at the top of the editor.
+    *   Add an "Auto-Generate" button with a magic/sparkle icon.
 
-3.  **Update Core Logic (`main.js`):**
-    *   Integrate `localStorage` to save and retrieve blog posts.
-    *   Handle the custom `delete` event from the `<blog-post>` component.
-    *   Implement a "Clear All" functionality.
-    *   Improve form handling and validation.
+3.  **Style AI Features (`style.css`):**
+    *   Design the AI input section with a distinct "AI" feel (gradients, glow).
+    *   Add loading animations for the generation process.
 
-4.  **Refine Interface (`index.html`):**
-    *   Structure the layout with a hero section and a main content area.
-    *   Enhance the form with more descriptive inputs (tags, author).
-    *   Add a navigation bar or header for a complete "App" feel.
-
-5.  **Deployment:**
-    *   Finalize changes.
-    *   Commit all files to the git repository.
-    *   Push to the remote GitHub repository.
+4.  **Deployment:**
+    *   Commit and push changes to GitHub.
